@@ -47,3 +47,10 @@ The trade-off here is that this library does not provide a `decode_all` convenie
 - `bool(scanner)` — `True` if bytes remain.
 
 `DecodeError(ValueError)` — raised on any malformed sequence.
+
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+
