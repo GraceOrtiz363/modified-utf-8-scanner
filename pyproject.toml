@@ -1,6 +1,6 @@
 [project]
 name = "modified-utf-8-scanner"
-version = "0.1.0"
+version = "0.1.1"
 description = "Parses Java-style Modified UTF-8 byte sequences where null and supplementary characters use two or six-byte surrogate pair encodings."
 requires-python = ">=3.10"
 dependencies = []
